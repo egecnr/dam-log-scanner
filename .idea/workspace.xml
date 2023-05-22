@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae57694c-38ff-4451-a2d7-fe6f1ffe931a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm-charts/cp-helm-charts" beforeDir="false" afterPath="$PROJECT_DIR$/helm-charts/cp-helm-charts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm-charts/cp-helm-charts/charts/cp-zookeeper/templates/poddisruptionbudget.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm-charts/cp-helm-charts/charts/cp-zookeeper/templates/poddisruptionbudget.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helm-charts/cp-helm-charts/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/helm-charts/cp-helm-charts/values.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

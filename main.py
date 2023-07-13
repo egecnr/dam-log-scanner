@@ -1,11 +1,24 @@
 from fastapi import FastAPI
 from dbclass import DbConnection
+import time
 
 app = FastAPI()
 
-
 @app.get("/")
 async def root():
-    dbobject = DbConnection()
-    connection = dbobject.connectDB("system","root","10.42.0.43:1521/ORCLCDB")
-    return connection.dsn
+    connection=  DbConnection()
+    print('Connected to Db')
+    print('Listening on database activity')
+    for x in range (3):
+     response = connection.getAuditLogs()
+     print("got the results")
+
+     print("waiting for the next audit check")
+     time.sleep(30)
+     print(response)
+     #return response
+     
+    
+    
+
+      

@@ -65,7 +65,6 @@ class DbConnection:
                 "action_name": str(v[3]),
                 "return_code": str(v[4]),
                 "unified_audit_policies": (v[5])
-
             }
             print(newObject)
             listOfJsonObjects.append(newObject)

@@ -12,10 +12,10 @@ async def root():
     for x in range (3):
      response = connection.getAuditLogs()
      print("got the results")
-
+     print(response)
      print("waiting for the next audit check")
      time.sleep(30)
-     print(response)
+     
      #return response
      
     

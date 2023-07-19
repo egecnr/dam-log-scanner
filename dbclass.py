@@ -2,6 +2,7 @@ import cx_Oracle
 from datetime import datetime, timezone
 import pytz
 from zoneinfo import ZoneInfo
+import json
 
 
 class DbConnection:
@@ -42,15 +43,34 @@ class DbConnection:
          self.lastChecked=now.strftime("%d.%m.%Y %H:%M:%S") 
          #self.lastChecked = str(datetime.now(tz).day)+ "." + str(datetime.now(tz).month)+"."+ str(datetime.now(tz).year)+" "+ str(datetime.now(tz).hour)+ ":"+str(datetime.now(tz).minute)+":"+str(datetime.now(tz).second)
          print(self.lastChecked)
-         print(self.lastChecked)
+         print(self.lastChecked)       
+         self.jsonConversion(values)     
          return values
     
-
 
     def returnTheLatestDate(self,values):
          returnRecord=""
          for record in values:
               returnRecord=record
          return str(returnRecord[0])
+
+
+    def jsonConversion(self,values):
+        listOfJsonObjects= []
+        for v in values:
+            newObject = {
+                "event_timestamp" : str(v[0]),
+                "sessionid" : str(v[1]),
+                "dbusername": str(v[2]),
+                "action_name": str(v[3]),
+                "return_code": str(v[4]),
+                "unified_audit_policies": (v[5])
+
+            }
+            print(newObject)
+            listOfJsonObjects.append(newObject)
+        return listOfJsonObjects
+        
+            
 
         

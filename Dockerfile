@@ -1,6 +1,7 @@
 ARG ALPINE_VERSION=3.18
 FROM alpine:${ALPINE_VERSION} as prod
 
+ARG VIRTUAL_PIP_INSTALL_DEPS=pip-install-deps
 RUN apk update && \
     apk add --no-cache \
         python3 \

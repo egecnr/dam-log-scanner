@@ -16,12 +16,12 @@ class DbConnection:
     def __init__(self):
         self.username= "system"
         self.password="root"
-        self.dsnInformation="10.42.0.54:1521/ORCLCDB" 
+        self.dsnInformation="10.42.0.99:1521/ORCLCDB" 
         self.connectDB()
 
 
     def connectDB(self):
-            self.connectionDB = cx_Oracle.connect(user= "system", password= "root", dsn="10.42.0.54:1521/ORCLCDB" ,encoding="UTF-8")
+            self.connectionDB = cx_Oracle.connect(user= "system", password= "root", dsn="10.42.0.99:1521/ORCLCDB" ,encoding="UTF-8")
 
 
     def getAuditLogs(self):

@@ -44,6 +44,14 @@ optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 
 [[package]]
+name = "cx-oracle"
+version = "8.3.0"
+description = "Python interface to Oracle"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "exceptiongroup"
 version = "1.1.2"
 description = "Backport of PEP 654 (exception groups)"
@@ -114,6 +122,14 @@ python-versions = ">=3.7"
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
 [[package]]
+name = "pytz"
+version = "2023.3"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "sniffio"
 version = "1.3.0"
 description = "Sniff out which async library your code is running under"
@@ -162,19 +178,21 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "148febee973bc0969bad77ca1ac18a4093a27f4a9dbfe3529cafbbb4aa380301"
+content-hash = "1d609793f42c54d05c9e619ddb46618b5873319f335ed641f783f496770fbe72"
 
 [metadata.files]
 annotated-types = []
 anyio = []
 click = []
 colorama = []
+cx-oracle = []
 exceptiongroup = []
 fastapi = []
 h11 = []
 idna = []
 pydantic = []
 pydantic-core = []
+pytz = []
 sniffio = []
 starlette = []
 typing-extensions = []

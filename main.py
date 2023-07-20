@@ -14,7 +14,7 @@ async def root():
      print("got the results")
      print(response)
      print("waiting for the next audit check")
-     time.sleep(20)
+     time.sleep(5)
      
     
     

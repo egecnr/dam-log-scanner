@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: filteringconversionapi
+  name: fastapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: filteringconversionapi
+      app: fastapi
   template:
     metadata:
       labels:
-        app: filteringconversionapi
+        app: fastapi
     spec:
       containers:
-      - name: filteringconversionapi
-        image: 
+      - name: apicontainer
+        image: egedocker/fastapi-repo:microservice-latest
         ports: 
         - containerPort: 3000

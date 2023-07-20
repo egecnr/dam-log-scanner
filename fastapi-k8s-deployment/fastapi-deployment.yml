@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: apicontainer
-        image: egedocker/fastapi-repo:microservice-latest
+        image: egedocker/fastapi-repo:latest
         resources:
             requests:
               memory: "64Mi"

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fastapi
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -15,5 +16,13 @@ spec:
       containers:
       - name: apicontainer
         image: egedocker/fastapi-repo:microservice-latest
+        resources:
+            requests:
+              memory: "64Mi"
+              cpu: "100m"
+            limits:
+              memory: "1Gi"
+              cpu: "1"
         ports: 
-        - containerPort: 3000
+        - name: http
+          containerPort: 3000
